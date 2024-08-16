@@ -28,26 +28,33 @@ This repository contains SQL queries related to two different datasets: `Country
 
 ## Round 2: Employee Management Queries
 Table Structure
-## Employees
 
-EmployeeID	INT	Unique identifier for each employee
-FirstName	VARCHAR(50)	First name of the employee
-LastName	VARCHAR(50)	Last name of the employee
-DepartmentID	INT	Foreign key to the Departments table
+### Table Structure
 
-## Departments
+**Employees**
 
-Column	Data Type	Description
-DepartmentID	INT	Unique identifier for each department
-DepartmentName	VARCHAR(100)	Name of the department
+| Column         | Data Type     | Description                                     |
+|----------------|---------------|-------------------------------------------------|
+| `EmployeeID`   | `INT`         | Unique identifier for each employee             |
+| `FirstName`    | `VARCHAR(50)` | First name of the employee                      |
+| `LastName`     | `VARCHAR(50)` | Last name of the employee                       |
+| `DepartmentID` | `INT`         | Foreign key to the Departments table            |
 
-## Orders
+**Departments**
 
-Column	Data Type	Description
-OrderID	INT	Unique identifier for each order
-EmployeeID	INT	Foreign key to the Employees table
-OrderDate	DATE	Date when the order was placed
-TotalAmount	DECIMAL(10, 2)	Total amount for the order
+| Column          | Data Type     | Description                                    |
+|-----------------|---------------|------------------------------------------------|
+| `DepartmentID`  | `INT`         | Unique identifier for each department          |
+| `DepartmentName`| `VARCHAR(100)`| Name of the department                        |
+
+**Orders**
+
+| Column       | Data Type     | Description                                 |
+|--------------|---------------|---------------------------------------------|
+| `OrderID`    | `INT`         | Unique identifier for each order            |
+| `EmployeeID` | `INT`         | Foreign key to the Employees table          |
+| `OrderDate`  | `DATE`        | Date when the order was placed              |
+| `TotalAmount`| `DECIMAL(10, 2)`| Total amount for the order                |
 
 ## Key Queries
 Total Sales Amount by Department
